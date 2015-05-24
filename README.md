@@ -13,10 +13,10 @@ The purpose of this project is to demonstrate the authors ability to collect, wo
 * 2. Each different observation of that variable is in a separate row
 * 3. The first row of the dataset contains variable names
 * 4. All variable names are
-* 	a. Descriptive
-* 	b. Lowercase
-* 	c. Unique
-* 	d. Free of underscores, dots or white spaces
+*    a. Descriptive
+*    b. Lowercase
+*    c. Unique
+*    d. Free of underscores, dots or white spaces
 
 The R script named "run_analysis.R" in this repo contains code that downloads the raw data above to the author's working directory and processes it to output a tidy dataset. Specifically, this document describes how the R script works, and the inputs, transformations and the outputs of each step.  For specific details of the tidy dataset variables refer to the accompanying "CodeBook.md" in this repo.
 
@@ -56,7 +56,7 @@ ASSUMPTION: The output of this step should be a subset of the single dataset out
 A vector of the subject variable, the activity variable and only the relevant feature variables is created. The dataset outputted in Step 1 is then subsetted using this vector. The subset is checked to ensure all observations are present but only the relvant variables are present.
 
 ### 3.Uses descriptive activity names to name the activities in the data set.
-## ASSUMPTION: The activity output of Step 2, with each of the activity variable's numeric observations replaced by its equivalent character description.
+ASSUMPTION: The activity output of Step 2, with each of the activity variable's numeric observations replaced by its equivalent character description.
 
 First, the "activity_labels.txt" file containing the ordered data.frame of numeric activity identifiers and corresponding activity descriptions, is read in. Second, the descriptions are tidied up as per the tidy dataset guidelines outlined above. Third, given the data.frame is ordered, it can be used to easily replace the numeric observations of the activity variable in the dataset outputted from Step 2 with their equivalent descriptions. The modified datset is checked to ensure the substitution was successful.
 
